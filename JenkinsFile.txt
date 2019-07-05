@@ -26,6 +26,8 @@ pipeline{
                                sh "cd /"
 
                 sh "sudo cp /var/lib/jenkins/workspace/${JOB_NAME}/target/hello-world-0.0.1-SNAPSHOT.jar ~/"
+                
+                sh "scp /var/lib/jenkins/workspace/${JOB_NAME}/pom.xml tania@51.104.219.221:~/pom.xml"
                        }
                }
        }
